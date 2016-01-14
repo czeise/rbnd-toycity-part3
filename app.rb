@@ -26,22 +26,22 @@ firehouse.in_stock? # Should return false
 
 products_in_stock = Product.in_stock
 # Should return an array of all products with a stock greater than zero
-puts products_in_stock.include?(nanoblock) # Should return true
-puts products_in_stock.include?(firehouse) # Should return false
+products_in_stock.include?(nanoblock) # Should return true
+products_in_stock.include?(firehouse) # Should return false
 
 # CUSTOMERS
 
-# Customer.new(name: "Walter Latimer")
-# Customer.new(name: "Julia Van Cleve")
+Customer.new(name: 'Walter Latimer')
+Customer.new(name: 'Julia Van Cleve')
 
-# Customer.all.count # Should return 2
+Customer.all.count # Should return 2
 
-# Customer.new(name: "Walter Latimer")
+# Customer.new(name: 'Walter Latimer')
 # Should return DuplicateCustomerError: 'Walter Latimer' already exists.
 
-# walter = Customer.find_by_name("Walter Latimer")
+walter = Customer.find_by_name("Walter Latimer")
 
-# walter.name # Should return "Walter Latimer"
+walter.name # Should return "Walter Latimer"
 
 # TRANSACTIONS
 
