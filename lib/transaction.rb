@@ -7,6 +7,11 @@ class Transaction
   def initialize(customer, product)
     @customer = customer
     @product = product
+
+    if product.stock == 0
+      raise OutOfStockError, "'#{product.title}' is out of stock."
+    end
+
     @id = @@id
 
     product.stock -= 1
@@ -14,6 +19,14 @@ class Transaction
     add_to_transactions
 
     @@id += 1
+  end
+
+  def self.all
+    @@transactions
+  end
+
+  def self.find(id)
+    @@transactions[id - 1]
   end
 
   private

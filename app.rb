@@ -56,12 +56,12 @@ nanoblock.stock # Should return 11
 
 # PURCHASES
 
-# walter.purchase(nanoblock)
+walter.purchase(nanoblock)
 
-# Transaction.all.count # Should return 2
+Transaction.all.count # Should return 2
 
-# transaction2 = Transaction.find(2)
-# transaction2.product == nanoblock # Should return true
+transaction2 = Transaction.find(2)
+transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
