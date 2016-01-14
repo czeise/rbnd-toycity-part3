@@ -2,7 +2,8 @@ require_relative 'errors'
 
 # Product class
 class Product
-  attr_reader :title, :price, :stock
+  attr_reader :title, :price
+  attr_accessor :stock
 
   @@products = []
 
