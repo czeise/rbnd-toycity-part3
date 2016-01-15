@@ -2,7 +2,7 @@ require_relative 'errors'
 
 # Product class
 class Product
-  attr_reader :title, :price
+  attr_reader :title, :price, :brand
   attr_accessor :stock
 
   @@products = []
@@ -11,7 +11,12 @@ class Product
     @title = options[:title]
     @price = options[:price]
     @stock = options[:stock]
+    @brand = options[:brand]
+
     add_to_products
+
+    # Must be able to add to products array before adding to brand.
+    @brand.add_product(self)
   end
 
   def self.all

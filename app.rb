@@ -2,12 +2,21 @@ require_relative 'lib/errors'
 require_relative 'lib/customer'
 require_relative 'lib/product'
 require_relative 'lib/transaction'
+require_relative 'lib/brand'
 
-# PRODUCTS
+# BRANDS (New feature 1!)
 
-Product.new(title: 'LEGO Iron Man vs. Ultron', price: 22.99, stock: 55)
-Product.new(title: 'Nano Block Empire State Building', price: 49.99, stock: 12)
-Product.new(title: 'LEGO Firehouse Headquarter', price: 199.99, stock: 0)
+lego = Brand.new(title: 'LEGO')
+nanoblocks = Brand.new(title: 'Nano Blocks')
+
+# PRODUCTS (Now with brands!)
+
+Product.new(title: 'LEGO Iron Man vs. Ultron', price: 22.99, stock: 55,
+            brand: lego)
+Product.new(title: 'Nano Block Empire State Building', price: 49.99, stock: 12,
+            brand: nanoblocks)
+Product.new(title: 'LEGO Firehouse Headquarter', price: 199.99, stock: 0,
+            brand: lego)
 
 Product.all.count # Should return 3
 
@@ -65,3 +74,13 @@ transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# BRAND FUNCTIONS
+
+puts 'Brand method demonstration!'
+puts '***************************'
+puts "Lego's title: #{lego.title}"
+puts "Lego's stock: #{lego.stock}"
+puts "Lego's average product price: $" + format('%.2f', "#{lego.average_price}")
+puts "Nano Block's total purchases: #{nanoblocks.purchases}"
+puts "Nano Block's total sales: $#{nanoblocks.sales}"
