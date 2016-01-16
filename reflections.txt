@@ -1,0 +1,22 @@
+1. How long did you spend working on this project?
+
+Looking back at my calendar and git log history, it looks like I spent about 7 hours on this project. Working through the lesson took 3 or 4 hours, then coming up with and implementing the features took a few more.
+
+
+2. What was the most rewarding challenge you conquered?
+
+It's very nice to create classes that make a little bit more sense out of the objects we're using. Having a Product class and a Customer class with methods named to indicate their meaning instead of arrays or hashes storing that information really makes understanding what you're writing a lot easier.
+
+
+3. What two additional features did you build? Why?
+
+Whenever a large update to a product comes out, there are inevitably features that customers love that get left out. I took a look at this latest version of the Toy City Report Generator, written from the ground up, and tried to think of major features that are missing from previous versions.
+
+The most obvious missing feature, was generating an actual report! My new report is slightly different than the previous version. I didn't add anything in to support the discounts that were part of the previous report so I left that information out. I did add the stock of each product to the products section and the total number of purchases of each brand to the brands section.
+
+The other big missing feature was brand information. I created a Brand class to store and access all of the data from brands that we're missing out on in the new version of Toy City.
+
+
+4. Where do you still have room to grow?
+
+I think I'm definitely still missing out on doing some things "the Ruby way". I think I often come up with a way to do something based on past experience and after that I try to think of a "more Ruby" way of doing it. That's a bit tricky when I already have the logic thought out a different way. I'm using Rubocop to analyze my code to sort of point out syntactical things I can do better, but it doesn't catch everything I could improve on.
