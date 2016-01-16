@@ -2,7 +2,7 @@
 class Transaction
   attr_reader :customer, :product, :id
   @@transactions = []
-  @@id = 1
+  @@class_id = 1
 
   def initialize(customer, product)
     @customer = customer
@@ -12,13 +12,13 @@ class Transaction
       raise OutOfStockError, "'#{product.title}' is out of stock."
     end
 
-    @id = @@id
+    @id = @@class_id
 
     product.stock -= 1
 
     add_to_transactions
 
-    @@id += 1
+    @@class_id += 1
   end
 
   def self.all

@@ -23,6 +23,8 @@ puts 'Outputting all of the expected values from the starter code'
 puts '*' * 59
 puts Product.all.count # Should return 3
 
+# NOTE: I left this commented out so that the code will complete succesfully.
+# Per Walter, handling errors isn't part of this poject, only raising them.
 # Product.new(title: 'LEGO Iron Man vs. Ultron', price: 22.99, stock: 55)
 # Should return DuplicateProductError: 'LEGO Iron Man vs. Ultron' already
 # exists.
@@ -48,6 +50,8 @@ Customer.new(name: 'Julia Van Cleve')
 
 puts Customer.all.count # Should return 2
 
+# NOTE: I left this commented out so that the code will complete succesfully.
+# Per Walter, handling errors isn't part of this poject, only raising them.
 # Customer.new(name: 'Walter Latimer')
 # Should return DuplicateCustomerError: 'Walter Latimer' already exists.
 
@@ -75,6 +79,8 @@ puts Transaction.all.count # Should return 2
 transaction2 = Transaction.find(2)
 puts transaction2.product == nanoblock # Should return true
 
+# NOTE: I left this commented out so that the code will complete succesfully.
+# Per Walter, handling errors isn't part of this poject, only raising them.
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
 
