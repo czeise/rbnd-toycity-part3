@@ -15,6 +15,10 @@ class Brand
     add_to_brands
   end
 
+  def self.all
+    @@brands
+  end
+
   def average_price
     total_price = 0
     @products.each do |product|
@@ -34,9 +38,7 @@ class Brand
   def sales
     sales = 0
     Transaction.all.each do |transaction|
-      if transaction.product.brand == self
-        sales += transaction.product.price
-      end
+      sales += transaction.product.price if transaction.product.brand == self
     end
     sales
   end
