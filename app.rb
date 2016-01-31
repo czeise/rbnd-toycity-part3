@@ -25,7 +25,8 @@ puts Product.all.count # Should return 3
 
 # NOTE: I left this commented out so that the code will complete succesfully.
 # Per Walter, handling errors isn't part of this poject, only raising them.
-# Product.new(title: 'LEGO Iron Man vs. Ultron', price: 22.99, stock: 55)
+# Product.new(title: 'LEGO Iron Man vs. Ultron', price: 22.99, stock: 55,
+#             brand: lego)
 # Should return DuplicateProductError: 'LEGO Iron Man vs. Ultron' already
 # exists.
 
