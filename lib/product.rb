@@ -36,7 +36,7 @@ class Product
   def self.in_stock
     products_in_stock = []
     @@products.each do |product|
-      products_in_stock << product if product.stock > 0
+      products_in_stock << product if product.in_stock?
     end
     products_in_stock
   end
